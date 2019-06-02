@@ -2,7 +2,7 @@ package com.codinginterviews.str;
 
 /**
  * 题目： 
- * 字符串匹配 -- newcoder 剑指Offer 52
+ * 正则表达式匹配 -- newcoder 剑指Offer 52
  * 
  * 题目描述：
  * 
