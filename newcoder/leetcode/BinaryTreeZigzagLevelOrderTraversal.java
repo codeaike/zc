@@ -86,13 +86,12 @@ public class BinaryTreeZigzagLevelOrderTraversal {
     			// 添加当前值到缓存
     			cur.add(curNode.val);
     			// 添加下层元素到队列
-    			// 需要倒序打印 则先添加右孩子再添加左孩子
-				if (curNode.left != null) {
-					queue.offer(curNode.left);
-				}
-				if (curNode.right != null) {
-					queue.add(curNode.right);
-				}
+			if (curNode.left != null) {
+				queue.offer(curNode.left);
+			}
+			if (curNode.right != null) {
+				queue.add(curNode.right);
+			}
     		}
     		
     		// 添加当前层遍历序列到ret & 更新倒序遍历标识位
@@ -136,13 +135,12 @@ public class BinaryTreeZigzagLevelOrderTraversal {
     				cur.add(curNode.val);
     			}
     			// 添加下层元素到队列
-    			// 需要倒序打印 则先添加右孩子再添加左孩子
-				if (curNode.left != null) {
-					queue.offer(curNode.left);
-				}
-				if (curNode.right != null) {
-					queue.add(curNode.right);
-				}
+			if (curNode.left != null) {
+				queue.offer(curNode.left);
+			}
+			if (curNode.right != null) {
+				queue.add(curNode.right);
+			}
     		}
     		
     		// 添加当前层遍历序列到ret & 更新倒序遍历标识位
