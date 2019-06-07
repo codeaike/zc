@@ -143,7 +143,8 @@ public class EntryNodeOfLoop {
 
     /**
      * 思路：
-     * 1、断链法 
+     * 1、断链法，可以改变原有链表结构时，可使用该方法
+     * 2、两指针遍历链表，一个起始指向第二个节点，另一个指向头节点，后一个指针一直断链，并依次推进两个指针，当前一个指针为null时，后一个指针会指向环的入口节点
      */
     public ListNode EntryNodeOfLoopIII(ListNode pHead){
     	if(pHead==null|| pHead.next==null) {
