@@ -60,8 +60,16 @@ public class GetMedianNumber {
         return (double)list.get(mid);
     }
     
+    /**
+     * 思路：
+	 * 1、使用一个最大堆(承载数据流的前半部分元素)，最小堆承载数据流的后半部分元素
+	 * 2、加入新的元素，奇数次添加加入最小堆(先加入最大堆中，再从最大堆中取出
+	 *       最大的元素加入最小堆中)，偶数次反之
+	 * 3、取出元素，count为奇数，从最小堆中取出最小元素即可，偶数取两个堆顶元素平均值
+     */
+    
     // 最大堆承载输入数据流的前半部分元素
-    private PriorityQueue<Integer> maxHeap = new PriorityQueue<>(100,
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<>(
     		new Comparator<Integer>(){
 
     			@Override
