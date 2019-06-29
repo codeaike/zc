@@ -48,8 +48,9 @@ public class BestTimeToBuyAndSellStockWithFee
         int sell = 0;
         
         for (int p : prices) {
+            int tmp = buy;
             buy = Math.max(buy, sell - p - fee);
-            sell = Math.max(sell, buy + p);
+            sell = Math.max(sell, tmp + p);
         }
         
         return sell;
